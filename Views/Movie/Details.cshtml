@@ -1,0 +1,48 @@
+﻿@model Cinema.Models.Movie
+
+@{
+    ViewBag.Title = "Movie Details";
+}
+<html>
+    <head>
+        <style>
+              .bg {
+                    background-image: url('/Cinema/Images/venommovies-1280-1539109319410_1280w.jpg');
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    font-size: 30px;
+                    font-family: Verdana, Helvetica, Sans-Serif;
+                    margin: 0;
+                    padding: 0;
+                    color: #696969;
+                    color:lime;
+                }
+        </style>
+    </head>
+    <body class="bg">
+        <h2>Movie Details</h2>
+        <table style="font-family:Arial;table-layout:auto">
+            <tr>
+                <td>Movie Name :</td>
+                <td>@Model.Name</td>
+            </tr>
+            <tr>
+                <td>Movie Type :</td>
+                <td>@Model.Type</td>
+            </tr>
+            <tr>
+                <td>Movie Duration :</td>
+                <td>@Model.Duration.ToString();</td>
+            </tr>
+            <tr>
+                <td>Movie Rate :</td>
+                <td>@Model.IBMD </td>
+            </tr>
+
+
+        </table>
+        @Html.ActionLink("Back to Movie List", "Index", "Movie");
+    </body>
+</html>
+
+

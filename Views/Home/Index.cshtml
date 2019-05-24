@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+<html background="/Cinema/Images/Cinemas-featured-image.jpg">
+        <head>
+           <h2> Welcome :) </h2>
+            <style>
+                .bg {
+                    background-image: url('/Cinema/Images/clapperboard-near-tasty-popcorn_23-2147803977.jpg');
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    font-size: .150em;
+                    font-family: Verdana, Helvetica, Sans-Serif;
+                    margin: 0;
+                    padding: 0;
+                    color: #696969;
+                    color:aqua;
+                }
+                .Links{
+                    font-size:30px;
+                    color:red;
+                }
+            </style>
+        </head>
+        <body class="bg">
+            <h1> Welcome :) </h1>
+            <div class="Links">
+                <br />
+                <h1>Show The Avilable Movies : @Html.ActionLink("Movies", "Index", "Movie")</h1>
+                <br />
+                <h1>Show The Halls and Seats Type : @Html.ActionLink("Halls", "Index", "Hall")</h1>
+                <br />
+                <h1>To Make A Reservation : @Html.ActionLink("Reservation", "Index", "Reservation")</h1>
+            </div>
+        </body>
+</html>

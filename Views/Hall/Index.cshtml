@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Cinema.Models.Hall>
+@using Cinema.Models;
+
+@{
+    ViewBag.Title = "Hall and Seats";
+}
+<html>
+<head>
+    <style>
+        .bg {
+            background-image: url('/Cinema/Images/empty-cinema-1024x572.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-size: 30px;
+            font-family: Verdana, Helvetica, Sans-Serif;
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg">
+    <div style="font-family:Arial">
+        <h2>Movie List</h2>
+        <ul>
+            @foreach (Hall hall in Model)
+            {
+                <li>
+                    @Html.ActionLink(hall.Name, "Details",new { @id = hall.HallID})
+
+                </li>
+            }
+        </ul>
+    </div>
+    <p style="font-family:Arial;font-size:30px"> Click On Hall to know the Movie of eah Hall and the Time</p>
+    <p style="font-family:Arial;font-size:20px"> Note : Each Hall have a 20 Row and eah row have 10 seat.<br />each seat have ID debendent on RowNumber and ColomnNumber and have a Number of set</p>
+</body>
+</html>
+
+
+
+

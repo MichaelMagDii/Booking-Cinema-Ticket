@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Cinema.Models.MovieHall>
+@using Cinema.Models
+@{
+    ViewBag.Title = "MovieHalls";
+}
+<html>
+<head>
+    <style>
+        .bg {
+            background-image: url('/Cinema/Images/002.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-size: 30px;
+            font-family: Verdana, Helvetica, Sans-Serif;
+            margin: 0;
+            padding: 0;
+            color: #696969;
+            color: lime;
+        }
+    </style>
+</head>
+<body class="bg">
+    <h2></h2>
+    @foreach(MovieHall moviehall in Model)
+    { 
+        <table style="font-family:Arial;table-layout:auto">
+            <tr>
+                <td>Movie Name :</td>
+                <td>@moviehall.MovieName</td>
+            </tr>
+            <br />
+            <tr>
+                <td>Movie Duration :</td>
+                <td>@moviehall.Duration</td>
+            </tr>
+            <br />
+            <tr>
+                <td>Movie StartTime :</td>
+                <td>@moviehall.StartTime</td>
+            </tr>
+            <br />
+            <tr>
+                <td>Hall Number :</td>
+                <td>@moviehall.HallID</td>
+            </tr>
+        </table>
+        <hr />
+    }
+    @Html.ActionLink("Back to Halls", "Index", "Hall")
+</body>
+</html>
+

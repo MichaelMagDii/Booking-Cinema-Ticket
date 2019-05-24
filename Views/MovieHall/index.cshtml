@@ -1,0 +1,41 @@
+﻿@model Cinema.Models.MovieHall
+
+@{
+    ViewBag.Title = "MovieHalls";
+}
+<html>
+<head>
+    <style>
+        .bg {
+            background-image: url('/Cinema/Images/venommovies-1280-1539109319410_1280w.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-size: 30px;
+            font-family: Verdana, Helvetica, Sans-Serif;
+            margin: 0;
+            padding: 0;
+            color: #696969;
+            color: lime;
+        }
+    </style>
+</head>
+<body class="bg">
+    <h2>Movie Details</h2>
+    <table style="font-family:Arial;table-layout:auto">
+        <tr>
+            <td>Movie Name :</td>
+            <td>@Model.MovieName</td>
+        </tr>
+        <tr>
+            <td>Movie Duration :</td>
+            <td>@Model.Duration</td>
+        </tr>
+        <tr>
+            <td>Movie StartTime :</td>
+            <td>@Model.StartTime</td>
+        </tr>
+    </table>
+    @Html.ActionLink("Back to Halls", "Index", "Hall");
+</body>
+</html>
+

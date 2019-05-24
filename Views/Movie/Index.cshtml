@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Cinema.Models.Movie>
+@using Cinema.Models;
+@{
+    ViewBag.Title = "Movie List";
+} 
+<html>
+    <head>
+        <style>
+              .bg {
+                    background-image: url('/Cinema/Images/must-see-movies-2018.jpg');
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    font-size: 30px;
+                    font-family: Verdana, Helvetica, Sans-Serif;
+                    margin: 0;
+                    padding: 0;
+                    color:white;
+                   
+                }
+        </style>
+    </head>
+    <body class="bg">
+        <div style="font-family:Arial">
+            <h2>Movie List</h2>
+            <ul>
+                @foreach (Movie movie in Model)
+                {
+                    <li>
+                        @Html.ActionLink(movie.Name, "Details", new { @id = movie.MovieID })
+                    </li>
+                }
+            </ul>
+        </div>
+    </body>
+</html>
+
